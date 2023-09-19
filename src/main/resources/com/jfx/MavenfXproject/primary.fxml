@@ -3,15 +3,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.geometry.Insets?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfx.MavenfXproject.PrimaryController">
    <children>
-   		<Label fx:id="motherLabel" text="母視窗倒數：" />
-    	<Button text="打開子視窗" onAction="#openChildWindow" />
-    	<Button text="母視窗倒數++" onAction="#addMotherCountdown" />
+    	<VBox fx:id="motherVBox">
+    		<children>
+   				<Label fx:id="motherLabel" text="母視窗倒數：" />
+   				<TextField fx:id="ChildCountdown"/>
+    			<Button text="打開子視窗" onAction="#openChildWindow" />
+    			<Button text="母視窗倒數++" onAction="#addMotherCountdown" />
+   			</children>
+   			<padding>
+      			<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   			</padding>
+		</VBox>
+    	<VBox fx:id="ChildreturnVBox">
+   			<padding>
+      			<Insets bottom="10.0" left="30.0" right="30.0" top="20.0" />
+   			</padding>
+		</VBox>
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
 </VBox>
